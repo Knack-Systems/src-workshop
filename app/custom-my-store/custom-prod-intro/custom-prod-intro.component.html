@@ -1,0 +1,11 @@
+<ng-container *ngIf="product$ | async as product">
+    <div class="col">
+    <div class="d-flex align-item-center justify-content-between">
+    
+    <div>
+    <cx-star-rating  [rating]="product?.averageRating" [disabled]="true" class="myTheme"> </cx-star-rating>
+    
+       ({{product?.numberOfReviews}})</div>
+     </div>
+    </div>
+    </ng-container>
