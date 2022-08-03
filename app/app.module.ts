@@ -5,12 +5,23 @@ import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
 import { AppRoutingModule } from "@spartacus/storefront";
 import { AppComponent } from './app.component';
-import { CustomMyStoreModule } from "./custom-my-store/custom-my-store.module";
+import { PPContactUsModule } from "./contact-us/contact-us.module";
+import { CustomQualraticsComponent } from './custom-qualratics/custom-qualratics.component';
+import { CustomQualraticsModule } from "./custom-qualratics/custom-qualratics.module";
+// import { CustomAddToCartButtonComponent } from './custom-add-to-cart-button/custom-add-to-cart-button.component';
+import { NewProductIntroModule } from "./new-product-intro/new-product-intro.module";
 import { SpartacusModule } from './spartacus/spartacus.module';
+
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomQualraticsComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -19,7 +30,9 @@ import { SpartacusModule } from './spartacus/spartacus.module';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     SpartacusModule,
-    CustomMyStoreModule
+    PPContactUsModule,
+    NewProductIntroModule,
+    CustomQualraticsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
