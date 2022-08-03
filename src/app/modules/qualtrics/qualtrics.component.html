@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row-1" [ngClass]="{'show': showText === true}">
+        <p>
+            Spartacus is a lean, Angular-based JavaScript storefront for SAP Commerce Cloud. Spartacus talks to SAP
+            Commerce Cloud exclusively through the Commerce REST API.
+            Spartacus is also an open source project. Spartacus is designed to be upgradable while maintaining full
+            extendability. You'll be able to adopt new versions of Spartacus by updating the Spartacus libraries that we
+            will regularly enhance.
+            Version 1.0.0 was released July 4, 2019, a month after SAP Commerce Cloud 1905.
+            <a target="_blank"
+                href="https://sap.github.io/spartacus-docs/3.x/building-the-spartacus-storefront-from-libraries-3-2/">Spartacus
+                Documentation</a>
+        </p>
+        <img src="../../../assets/logo-blue_64x64.png" alt="Spartacus-Logo">
+    </div>
+    <a (click)="showText = !showText">{{ showText ? 'Show Less': 'Show More' }}</a>
+
+    <div class="row-2" *ngIf="isLoggedIn">
+        <a href="http://localhost:4200/electronics-spa/en/USD/login" target="_blank">Login the see more information
+            about the product</a>
+    </div>
+
+</div>

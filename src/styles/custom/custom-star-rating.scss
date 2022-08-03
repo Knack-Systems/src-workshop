@@ -1,0 +1,9 @@
+    cx-page-layout.ProductDetailsPageTemplate {
+        cx-star-rating.star:nth-child(n),
+        cx-icon.star.cx-icon.fas.fa-star {
+            background: linear-gradient(calc(var(--star-rating-dir, 1) * 90deg), var(--cx-color-visual-focus) 0%, var(--cx-color-visual-focus) calc((var(--star-fill, 0) - 3 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill, 0) - 3 + 1) * 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
