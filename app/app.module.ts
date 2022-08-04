@@ -7,7 +7,6 @@ import { AppRoutingModule } from "@spartacus/storefront";
 import { AppComponent } from './app.component';
 import { CustomMyStoreModule } from "./custom-my-store/custom-my-store.module";
 import { SpartacusModule } from './spartacus/spartacus.module';
-
 @NgModule({
   declarations: [
     AppComponent

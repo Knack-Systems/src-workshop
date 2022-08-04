@@ -1,4 +1,8 @@
-h1.heading {
-    font-weight: 600;
-    text-transform: uppercase;;
-}
+:root {--cx-color-primary: #041e3c !important;  }
+
+h1.heading {font-weight: 600;text-transform: uppercase;}
+
+.btn-primary, .btn-primary:hover, cx-tab-paragraph-container > button:after {background-color:#041e3c !important}
+cx-tab-paragraph-container > button.active, cx-tab-paragraph-container > button:hover {
+  color:#041e3c !important;}
+ 

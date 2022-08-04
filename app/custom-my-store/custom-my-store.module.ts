@@ -6,9 +6,6 @@ import { CustomProdIntroComponent } from './custom-prod-intro/custom-prod-intro.
 import { StarRatingModule } from '@spartacus/storefront';
 import { CustomPdpComponent } from './custom-pdp/custom-pdp.component';
 import { CustomQualtricsComponent } from './custom-qualtrics/custom-qualtrics.component';
-
-
-
 @NgModule({
   declarations: [
     CustomProdIntroComponent,
