@@ -1,0 +1,5 @@
+<ng-container *ngIf="product$ | async as product">
+  <h1 *ngIf="product.manufacturer">{{ product.manufacturer | uppercase }}</h1>
+  <h3>{{ product.price?.formattedValue }}</h3>
+  <div [innerHTML]="product.summary"></div>
+</ng-container>
