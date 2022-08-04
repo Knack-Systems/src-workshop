@@ -1,0 +1,13 @@
+<p>
+  <a (click)="goToLink()" class="link">page link</a>
+</p>
+
+<div *ngIf="isLoggedIn">
+  <a
+    class="btn btn-link button-add-link cx-action-link"
+    href="/electronics-spa/en/USD/login"
+    ><span class="button-text">Login</span></a
+  ><span> Login the see more information about the product</span>
+</div>
+
+<ng-template #differentContent> something else </ng-template>

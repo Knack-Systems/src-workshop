@@ -1,12 +1,8 @@
-import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { EffectsModule } from "@ngrx/effects";
-import { StoreModule } from "@ngrx/store";
-import { AppRoutingModule } from "@spartacus/storefront";
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomMyStoreModule } from "./custom-my-store/custom-my-store.module";
-import { SpartacusModule } from './spartacus/spartacus.module';
 
 @NgModule({
   declarations: [
@@ -14,12 +10,7 @@ import { SpartacusModule } from './spartacus/spartacus.module';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    StoreModule.forRoot({}),
-    EffectsModule.forRoot([]),
-    SpartacusModule,
-    CustomMyStoreModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

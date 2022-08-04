@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ConfigModule, DeferLoadingStrategy, provideConfig, provideDefaultConfig } from '@spartacus/core';
+import {
+  ConfigModule,
+  DeferLoadingStrategy,
+  provideConfig,
+  provideDefaultConfig,
+} from '@spartacus/core';
 import { layoutConfig, LayoutConfig } from '@spartacus/storefront';
 
 @NgModule({
@@ -10,16 +15,15 @@ import { layoutConfig, LayoutConfig } from '@spartacus/storefront';
     ConfigModule.withConfig({
       layoutSlots: {
         header: {
-          // xs:{
-          //   slots: ['SiteLogo']
-          // },
-          // md: {
-          //   slots: ['PreHeader']
-
-          // },
+          xs: {
+            slots: ['SiteLogo'],
+          },
+          md: {
+            slots: ['PreHeader'],
+          },
           // lg: {
           //   slots: ['SearchBox']
-          // }
+          // },
 
           lg: {
             slots: [
@@ -88,16 +92,14 @@ import { layoutConfig, LayoutConfig } from '@spartacus/storefront';
             pageFold: 'UpSelling',
           },
           pageFold: 'Summary',
-          slots: [
-            'Summary',
-            'UpSelling',
-            'CrossSelling',
-            'Tabs',
-            'PlaceholderContentSlot',
-          ],
+          slots: ['Summary', 'UpSelling', 'Tabs', 'PlaceholderContentSlot'],
         },
         CartPageTemplate: {
-          slots: ['TopContent', 'CenterRightContentSlot', 'EmptyCartMiddleContent'],
+          slots: [
+            'TopContent',
+            'CenterRightContentSlot',
+            'EmptyCartMiddleContent',
+          ],
         },
         AccountPageTemplate: {
           slots: ['BodyContent', 'SideContent'],
@@ -118,8 +120,8 @@ import { layoutConfig, LayoutConfig } from '@spartacus/storefront';
           slots: ['RightContentSlot'],
         },
       },
-    } as LayoutConfig)
+    } as LayoutConfig),
   ],
-  providers: []
+  providers: [],
 })
-export class SpartacusLayoutModule { }
+export class SpartacusLayoutModule {}
