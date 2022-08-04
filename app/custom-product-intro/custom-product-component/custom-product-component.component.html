@@ -1,0 +1,20 @@
+<div col-auto>
+  <ng-container *ngIf="product$ | async as product">
+    <h1>{{ product.manufacturer | uppercase }}</h1>
+    <div d-flex justify-content-between align-items-centre>
+      <div>
+        <cx-star-rating
+          [rating]="product.averageRating"
+          [disabled]="true"
+        ></cx-star-rating>
+        <button
+          *ngIf="reviewsTabAvailable | async"
+          class="btn btn-link cx-action-link"
+          (click)="showReviews()"
+        >
+          <span>Read All Reviews {{ product.numberOfReviews }} Reviews</span>
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</div>

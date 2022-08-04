@@ -8,11 +8,17 @@ import { AppComponent } from './app.component';
 import { SpartacusModule } from './spartacus/spartacus.module';
 import { CustomComponentComponent } from './custom-component/custom-component.component';
 import { CustomComponentModule } from "./custom-component/custom-component.module";
+import { CustomProductIntroComponent } from './custom-product-intro/custom-product-intro.component';
+import { CustomProductIntroModule } from './custom-product-intro/custom-product-intro.module';
+import { CustomQualraticsComponent } from './custom-qualratics/custom-qualratics.component';
+import { CustomQualraticsModule } from './custom-qualratics/custom-qualratics.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomComponentComponent
+    CustomComponentComponent,
+    CustomProductIntroComponent,
+    CustomQualraticsComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +27,9 @@ import { CustomComponentModule } from "./custom-component/custom-component.modul
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     SpartacusModule,
-    CustomComponentModule
+    CustomComponentModule,
+    CustomProductIntroModule,
+    CustomQualraticsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
