@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
-import { AppRoutingModule } from "@spartacus/storefront";
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomMyStoreModule } from "./custom-my-store/custom-my-store.module";
 import { SpartacusModule } from './spartacus/spartacus.module';
+import { CustomComponentComponent } from './custom-component/custom-component.component';
+import { CustomComponentModule } from "./custom-component/custom-component.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,7 @@ import { SpartacusModule } from './spartacus/spartacus.module';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     SpartacusModule,
-    CustomMyStoreModule
+    CustomComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

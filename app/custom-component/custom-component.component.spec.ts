@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomQualtricsComponent } from './custom-qualtrics.component';
+import { CustomComponentComponent } from './custom-component.component';
 
-describe('CustomQualtricsComponent', () => {
-  let component: CustomQualtricsComponent;
-  let fixture: ComponentFixture<CustomQualtricsComponent>;
+describe('CustomComponentComponent', () => {
+  let component: CustomComponentComponent;
+  let fixture: ComponentFixture<CustomComponentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomQualtricsComponent ]
+      declarations: [ CustomComponentComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CustomQualtricsComponent);
+    fixture = TestBed.createComponent(CustomComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
