@@ -1,0 +1,33 @@
+cx-star-rating {
+  padding: 15px 0;
+
+  &:not([disabled='true']) {
+    cursor: pointer;
+  }
+
+  .star {
+    font-size: 20px;
+    margin: 0 2.5px;
+
+    @for $i from 1 to 6 {
+      &:nth-child(#{$i}) {
+        background: linear-gradient(
+          calc(var(--star-rating-dir, 1) * 90deg),
+          #041e3c 0%,
+          #041e3c
+            calc((var(--star-fill, 0) - #{$i} + 1) * 100%),
+          var(--cx-color-light) calc((var(--star-fill, 0) - #{$i} + 1) * 100%)
+        );
+        background-clip: text !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+      }
+    }
+  }
+}
+
+// star rating direction is used to fix the lack of start/end
+[dir='rtl'] .star {
+  --star-rating-dir: -1;
+}
+

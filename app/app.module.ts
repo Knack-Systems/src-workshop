@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
-import { AppRoutingModule } from "@spartacus/storefront";
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomMyStoreModule } from "./custom-my-store/custom-my-store.module";
 import { SpartacusModule } from './spartacus/spartacus.module';
+import { CustomComponentComponent } from './custom-component/custom-component.component';
+import { CustomComponentModule } from "./custom-component/custom-component.module";
+import { CustomProductIntroComponent } from './custom-product-intro/custom-product-intro.component';
+import { CustomProductIntroModule } from './custom-product-intro/custom-product-intro.module';
+import { CustomQualraticsComponent } from './custom-qualratics/custom-qualratics.component';
+import { CustomQualraticsModule } from './custom-qualratics/custom-qualratics.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomComponentComponent,
+    CustomProductIntroComponent,
+    CustomQualraticsComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +27,9 @@ import { SpartacusModule } from './spartacus/spartacus.module';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     SpartacusModule,
-    CustomMyStoreModule
+    CustomComponentModule,
+    CustomProductIntroModule,
+    CustomQualraticsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
