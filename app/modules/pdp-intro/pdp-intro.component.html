@@ -1,0 +1,4 @@
+<div *ngIf="products | async as products">
+    <cx-star-rating [disabled]="true" [rating]="products?.averageRating"> </cx-star-rating>
+    <p>{{products?.numberOfReviews}}</p>
+</div>
