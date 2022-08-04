@@ -5,7 +5,6 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
-import { CustomPriceaChangeModule } from './custom-pricea-change/custom-pricea-change.module';
 import { CustomProductIntroModule } from './custom-product-intro/custom-product-intro.module';
 import { NewContactUsModule } from './new-contact-us/new-contact-us.module';
 import { SpartacusModule } from './spartacus/spartacus.module';
@@ -21,7 +20,6 @@ import { CustomQualraticsModule } from './custom-qualratics/custom-qualratics.mo
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     SpartacusModule,
-    CustomPriceaChangeModule,
     NewContactUsModule,
     CustomProductIntroModule,
     CustomQualraticsModule,
