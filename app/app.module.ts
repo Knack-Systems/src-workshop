@@ -1,3 +1,4 @@
+import { CMBrandComponentModule } from './brand-component/brand-component.module';
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -5,8 +6,8 @@ import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
 import { AppRoutingModule } from "@spartacus/storefront";
 import { AppComponent } from './app.component';
-import { CustomMyStoreModule } from "./custom-my-store/custom-my-store.module";
 import { SpartacusModule } from './spartacus/spartacus.module';
+import { CMQualtricComponentModule } from './qualtric-component/qualtric-component.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SpartacusModule } from './spartacus/spartacus.module';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     SpartacusModule,
-    CustomMyStoreModule
+    CMBrandComponentModule,
+    CMQualtricComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

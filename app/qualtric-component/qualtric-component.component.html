@@ -1,0 +1,20 @@
+<ng-container *ngIf="aboutProduct$ | async as aboutProduct">
+<h3>
+  <u> More Details</u>
+</h3>
+<ul>
+  <li>
+    Stock: {{ stockLevelStatus }}
+  </li>
+  <li>
+    Stock Number: {{ StockNumber }}
+  </li>
+  <li>
+    <a href="https://sap.github.io/spartacus-docs/3.x/building-the-spartacus-storefront-from-libraries-3-2/">Learn Sparatcus</a>
+  </li>
+ 
+</ul>
+<h3 *ngIf="!logged">
+  <a href="http://localhost:4200/electronics-spa/en/USD/login"><u>Login the see more information about the product</u></a>
+</h3>
+</ng-container>

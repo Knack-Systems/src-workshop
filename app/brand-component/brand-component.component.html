@@ -1,0 +1,16 @@
+<!-- <h1>
+  BRAND: {{ brand }}
+</h1> -->
+<ng-container *ngIf="productDetails$ | async as productDetail">
+ <h1 *ngIf="brand">
+  BRAND: {{ brand | uppercase }}
+</h1>
+
+</ng-container>
+
+
+<!-- <ng-container *ngIf="productDetails$ | async as productDetail"> 
+  <small>
+    {{ productDetail | json}}
+  </small>
+</ng-container> -->
