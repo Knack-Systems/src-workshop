@@ -5,8 +5,9 @@ import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
 import { AppRoutingModule } from "@spartacus/storefront";
 import { AppComponent } from './app.component';
-import { CustomMyStoreModule } from "./custom-my-store/custom-my-store.module";
 import { SpartacusModule } from './spartacus/spartacus.module';
+
+import { CustomComponentsModule } from './components/custom-components.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { SpartacusModule } from './spartacus/spartacus.module';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     SpartacusModule,
-    CustomMyStoreModule
+    CustomComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

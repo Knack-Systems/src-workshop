@@ -1,0 +1,47 @@
+
+h1 {
+    font-size: 54px;
+    text-align: left;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    color: #041e3c;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+}
+.BottomHeaderSlot {
+    display: none;
+}
+
+
+.ProductDetailsPageTemplate {
+    cx-product-intro {
+        cx-star-rating {
+            .star:nth-child(1) {
+                background: linear-gradient(calc(var(--star-rating-dir, 1) * 90deg), #041e3c 0%, #041e3c calc((var(--star-fill, 0) - 1 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill, 0) - 1 + 1) * 100%));
+                background-clip: text;
+            }
+            .star:nth-child(2) {
+                background: linear-gradient(calc(var(--star-rating-dir, 1) * 90deg), #041e3c 0%, #041e3c calc((var(--star-fill, 0) - 2 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill, 0) - 2 + 1) * 100%));
+                background-clip: text;
+            }
+            .star:nth-child(3) {
+                background: linear-gradient(calc(var(--star-rating-dir, 1) * 90deg), #041e3c 0%, #041e3c calc((var(--star-fill, 0) - 3 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill, 0) - 3 + 1) * 100%));
+                background-clip: text;
+            }
+            .star:nth-child(4) {
+                background: linear-gradient(calc(var(--star-rating-dir, 1) * 90deg), #041e3c 0%, #041e3c calc((var(--star-fill, 0) - 4 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill, 0) - 4 + 1) * 100%));
+                background-clip: text;
+                }
+            .star:nth-child(5) {
+                background: linear-gradient(calc(var(--star-rating-dir, 1) * 90deg), #041e3c 0%, #041e3c calc((var(--star-fill, 0) - 5 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill, 0) - 5 + 1) * 100%));
+                background-clip: text;
+            }
+        }
+        .code {
+            display: none;
+        }
+        
+    }
+
+}

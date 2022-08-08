@@ -1,0 +1,18 @@
+app-product-summary {
+    h1 {
+        cursor: default;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    h1:hover {
+        cursor: pointer;
+    }
+    .price {
+        display: inline-block;
+        font-size: var(--cx-font-size,1.375rem);
+        font-weight: var(--cx-font-weight-semi);
+        line-height: var(--cx-line-height,1.2222222222);
+        margin: 0 0 11px;
+    }
+    
+}
