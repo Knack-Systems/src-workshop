@@ -5,6 +5,7 @@
 
   /* star icon theme */
   :root {--cx-color-myprimary: #041e3c;  }
+
   %cx-star-rating {
     padding: 15px 0;
   
@@ -37,3 +38,16 @@
       }
     }
   }
+
+  /* cart Page Modification */
+  .border-box {border:1px solid #aaa;box-sizing: border-box}
+  app-custom-order-summary h3 {text-transform:uppercase;font-size:var(--cx-font-size, 1.125rem); text-decoration: underline;font-weight:600}
+  .detail-box {display: flex; justify-content: space-between;margin:20px 0;font-size:1rem;}
+  .cx-cart-quick-order-form-qty {width:30%;margin-left:10px}
+  .custom-cart-title {font-size:1rem;font-weight: 600;text-decoration: underline;}
+
+  .card-header:first-child {padding:0 !important;margin:0 !important; background: transparent;}
+
+  accordion .btn-link {color:#222;font-size: 1rem;font-weight: 600;text-decoration: underline;}
+  accordion .btn-link:focus {box-shadow: none;}
+  accordion .card-body {padding:0}

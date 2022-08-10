@@ -1,0 +1,55 @@
+<div class="pt-3 ml-5">
+<ng-container *ngIf="cart$ | async as cart">
+  <div class="border-box">
+        <div class="col">
+    <h3 class="custom-cart-title pt-3">
+        Quick Order
+    </h3>
+    <div class="form-group">
+      <form (ngSubmit)="applyQuickOrder()" [formGroup]="quickOrderForm">
+        <div class="cx-cart-quick-order-form-container">
+            <div class="detail-box">
+          <div class="cx-cart-quick-order-form-productID">
+            <label class="cx-cart-quick-order-form-label">
+                Product ID
+            </label>
+            <input
+              aria-required="true"
+              class="form-control input-product-code"
+              formControlName="productCode"
+              placeholder="Product No"
+              type="text"
+            />
+        </div>
+  
+          <div class="cx-cart-quick-order-form-qty">
+            <label class="cx-cart-quick-order-form-label">
+                Qty
+            </label>
+            <input
+              aria-required="true"
+              class="form-control input-quantity"
+              formControlName="quantity"
+              type="number"
+            />
+        </div></div>
+          <button
+            [class.disabled]="cartIsLoading$ | async"
+            [disabled]="quickOrderForm.invalid"
+            class="btn btn-block btn-action apply-quick-order-button"
+            type="submit">
+            add
+          </button>
+          <cx-form-errors
+          aria-live="assertive"
+          aria-atomic="true"
+          [control]="quickOrderForm.get('productCode')"
+        ></cx-form-errors>
+        <cx-form-errors
+          aria-live="assertive"
+          aria-atomic="true"
+          [control]="quickOrderForm.get('quantity')"
+        ></cx-form-errors>
+        </div>
+      </form></div></div></div>
+    </ng-container></div>
