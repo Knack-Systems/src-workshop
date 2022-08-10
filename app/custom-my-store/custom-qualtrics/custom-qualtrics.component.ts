@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '@spartacus/core';
 import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-custom-qualtrics',
   templateUrl: './custom-qualtrics.component.html',
@@ -18,4 +19,5 @@ export class CustomQualtricsComponent implements OnInit {
    // this.router.navigate('[./login]');
     this.router.navigate(['/login']);
   }
+
 }

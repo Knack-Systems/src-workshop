@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '@spartacus/core';
 import { CurrentProductService } from '@spartacus/storefront';
 import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-custom-pdp',
   templateUrl: './custom-pdp.component.html',
@@ -15,4 +16,5 @@ export class CustomPdpComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }
