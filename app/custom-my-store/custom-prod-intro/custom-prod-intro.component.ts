@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Product } from '@spartacus/core';
 import { CurrentProductService } from '@spartacus/storefront';
 import { Observable } from 'rxjs';
-
 @Component({
   selector: 'app-custom-prod-intro',
   templateUrl: './custom-prod-intro.component.html',
-  styleUrls: ['./custom-prod-intro.component.scss']
+  styleUrls: ['./custom-prod-intro.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CustomProdIntroComponent implements OnInit {
 
@@ -16,5 +16,4 @@ export class CustomProdIntroComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

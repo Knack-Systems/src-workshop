@@ -1,0 +1,23 @@
+<div class="col">
+<h3 class="custom-cart-title pt-3">Order Summary</h3>
+<div class="detail-box">
+<div>Subtotal:</div>
+<div>{{ cart.subTotal?.formattedValue  }}</div>
+</div>
+<div class="detail-box">
+    <div>Product discounts:</div>
+    <div>{{ cart.productDiscounts?.formattedValue  }}</div>
+    </div>
+    <div class="detail-box">
+        <div>The order total includes tax of {{ cart.totalTax?.formattedValue}}</div>
+        </div>
+        <div class="detail-box">
+            <div><b>TOTAL:</b></div>
+            <div><b>{{ cart.subTotal?.formattedValue  }}</b></div>
+            </div>
+            <div class="detail-box">
+                <div>You saved: {{ cart.totalDiscounts?.formattedValue}}</div>
+                </div>
+      
+</div>
+

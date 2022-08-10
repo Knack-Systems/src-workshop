@@ -3,3 +3,9 @@
 $styleVersion: 4.3;
 @import '~@spartacus/styles/index';
 @import './custom.scss';
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
