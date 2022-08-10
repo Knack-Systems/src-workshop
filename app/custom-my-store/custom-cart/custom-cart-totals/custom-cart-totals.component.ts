@@ -13,7 +13,6 @@ export class CustomCartTotalsComponent implements OnInit {
   cart$: Observable<Cart> | any =  this.activeCartService.getActive();
   entries$: Observable<OrderEntry[]> = this.activeCartService.getEntries();
   myEntries: any;
-
   cartValidationInProgress = false;
   protected subscription = new Subscription();
 
