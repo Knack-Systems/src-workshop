@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActiveCartService, Cart, CartAddEntryFailEvent, CartAddEntrySuccessEvent, EventService, GlobalMessageService, GlobalMessageType } from '@spartacus/core';
 import { Observable, Subscription } from 'rxjs';
 import { map, first } from 'rxjs/operators';
-
 @Component({
   selector: 'app-custom-cart-quick',
   templateUrl: './custom-cart-quick.component.html',

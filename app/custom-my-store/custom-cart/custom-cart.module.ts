@@ -10,7 +10,6 @@ import { CustomCarasoulComponent } from '../custom-carasoul/custom-carasoul.comp
 import { CustomMediaComponent } from '../custom-media/custom-media.component';
 import { CustomCarasoulChildComponent } from '../custom-carasoul-child/custom-carasoul-child.component';
 
-
 @NgModule({
   declarations: [
     CustomCartTotalsComponent,

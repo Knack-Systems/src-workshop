@@ -4,7 +4,6 @@ import { CmsConfig, ConfigModule, I18nModule, provideDefaultConfig } from '@spar
 import { CustomCartQuickComponent } from './custom-cart-quick.component';
 import { FormErrorsModule } from '@spartacus/storefront';
 import { ReactiveFormsModule } from '@angular/forms';
-
 @NgModule({
   imports: [CommonModule, 
     ReactiveFormsModule, 

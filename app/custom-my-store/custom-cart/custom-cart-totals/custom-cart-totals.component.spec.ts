@@ -12,7 +12,6 @@ describe('CustomCartTotalsComponent', () => {
     })
     .compileComponents();
   });
-
   beforeEach(() => {
     fixture = TestBed.createComponent(CustomCartTotalsComponent);
     component = fixture.componentInstance;

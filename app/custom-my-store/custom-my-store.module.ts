@@ -9,7 +9,7 @@ import { CustomQualtricsComponent } from './custom-qualtrics/custom-qualtrics.co
 import { CustomApplyCouponComponent } from './custom-apply-coupon/custom-apply-coupon.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
- 
+
 @NgModule({
   declarations: [
     CustomProdIntroComponent,

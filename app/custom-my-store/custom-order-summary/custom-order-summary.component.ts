@@ -8,7 +8,6 @@ import { Cart } from '@spartacus/core';
 })
 export class CustomOrderSummaryComponent implements OnInit {
   @Input() cart: Cart | any;
-
   
   constructor() { }
 
