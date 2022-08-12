@@ -1,0 +1,31 @@
+cx-page-layout.CartPageTemplate
+{
+    app-subtotal-component
+    {
+        border: 1px solid #e6d9d9;
+        border-radius: 5%;
+        padding: 12px;
+        margin: 24px;
+    }
+    app-cart-coupan
+    {
+        width: 91%;
+        height: 20%;
+        // border: 2px solid #d5c5c5;
+        padding: 5px;
+        padding-left: 64px;
+        border-radius: 5%;
+    }
+    cx-cart-coupon
+    {
+        // border-top: 2px solid grey;
+        // border-bottom: 2px solid grey;
+    }
+    cx-cart-quick-order-form
+    {
+        // border-top: 2px solid grey;
+        // border-bottom: 2px solid grey;
+        margin: 10px;   
+    }
+    }
+   

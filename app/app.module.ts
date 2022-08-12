@@ -1,15 +1,17 @@
+import { ReactiveFormsModule } from '@angular/forms';
+import { STQuickOrderModule } from './quick-order/quick-order.module';
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from "@angular/common/http";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
 import { AppRoutingModule } from "@spartacus/storefront";
 import { AppComponent } from './app.component';
-import { CustomCartModule } from "./custom-my-store/custom-cart/custom-cart.module";
-import { CustomMyStoreModule } from "./custom-my-store/custom-my-store.module";
+import { STCartCouponModule } from "./cart-coupon";
+import { CartSummaryModule } from "./cart-summary/cart-summary.module";
 import { SpartacusModule } from './spartacus/spartacus.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CustomCartQuickModule } from './custom-my-store/custom-cart-quick/custom-cart-quick.module';
+import { STSubtotalComponentModule } from "./subtotal-component/subtotal-component.module";
+import { STImportExportModule } from './import-export/import-export.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -21,10 +23,11 @@ import { CustomCartQuickModule } from './custom-my-store/custom-cart-quick/custo
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     SpartacusModule,
-    CustomMyStoreModule,
-    CustomCartModule,
-    BrowserAnimationsModule,
-    CustomCartQuickModule
+    STSubtotalComponentModule,
+    CartSummaryModule,
+    STCartCouponModule,
+    STQuickOrderModule,ReactiveFormsModule,
+    STImportExportModule
   ],
   providers: [],
   bootstrap: [AppComponent]

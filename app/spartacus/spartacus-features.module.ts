@@ -91,7 +91,7 @@ import { AsmFeatureModule } from './features/asm/asm-feature.module';
     CartSavedCartFeatureModule,
     CartQuickOrderFeatureModule,
     CartImportExportFeatureModule,
-    AsmFeatureModule
+    AsmFeatureModule,
   ]
 })
 export class SpartacusFeaturesModule { }

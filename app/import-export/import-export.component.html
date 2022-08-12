@@ -1,0 +1,50 @@
+<h3>
+  You may also like this..
+</h3>
+
+<div class="row">
+  <ng-container *ngIf="newProducts1$ | async as newProducts1">
+  <div class="col-4 likeProduct">
+    
+  
+    <div class="productName">
+      <p>{{ p1}}</p>
+    </div>
+    <div class="productPrice">
+      <p>{{pr1}}</p>
+    </div>
+    <div class="productSummary">
+      <p>{{d1}}</p>
+    </div>
+  
+  
+  </div>
+</ng-container>
+<ng-container *ngIf="newProducts2$ | async as newProducts2">
+  <div class="col-4 likeProduct">
+    <div class="productName">
+      <p>{{p2}}</p>
+    </div>
+    <div class="productPrice">
+      <p>{{pr2}}</p>
+    </div>
+    <div class="productSummary">
+      <p>{{d2}}</p>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="newProducts3$ | async as newProducts3">
+  <div class="col-4 likeProduct">
+    <div class="productName">
+      <p>{{p3}}</p>
+    </div>
+    <div class="productPrice">
+      <p>{{pr3}}</p>
+    </div>
+    <div class="productSummary">
+      <p>{{d3}}</p>
+    </div>
+  </div>
+</ng-container>
+</div>
+
