@@ -6,7 +6,7 @@ import { provideConfig, CmsConfig } from '@spartacus/core';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [QMQualtricsComponent],
   imports: [
     CommonModule
   ],

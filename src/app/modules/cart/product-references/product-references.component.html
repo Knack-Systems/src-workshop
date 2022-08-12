@@ -1,0 +1,51 @@
+<div class="container">
+  <h3>
+    You may also like...
+  </h3>
+
+  <div class="row">
+
+    <ng-container>
+      <div class="col-4 productDesc">
+        <div class="productName">
+          <p>{{ prodFirst.name }}</p>
+        </div>
+        <div class="productPrice">
+          <p>{{ prodFirst.price.formattedValue }}</p>
+        </div>
+        <div class="productSummary">
+          <p>{{ prodFirst.summary }}</p>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container>
+      <div class="col-4 productDesc">
+        <div class="productName">
+          <p>{{ prodSecond.name }}</p>
+        </div>
+        <div class="productPrice">
+          <p>{{ prodSecond.price.formattedValue }}</p>
+        </div>
+        <div class="productSummary">
+          <p>{{ prodSecond.summary }}</p>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container>
+      <div class="col-4 productDesc">
+        <div class="productName">
+          <p>{{ prodThird.name }}</p>
+        </div>
+        <div class="productPrice">
+          <p>{{ prodThird.price.formattedValue }}</p>
+        </div>
+        <div class="productSummary">
+          <p>{{ prodThird.summary }}</p>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+</div>

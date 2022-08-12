@@ -1,0 +1,10 @@
+app-custom-cart-totals {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+    app-custom-summary {
+        h3 {
+            text-decoration: underline;
+        }
+    }
+}

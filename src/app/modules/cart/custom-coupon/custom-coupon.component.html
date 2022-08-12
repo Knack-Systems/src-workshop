@@ -1,0 +1,53 @@
+<ng-container *ngIf="cart$ | async as cart">
+  <ngb-accordion #acc="ngbAccordion">
+    <ngb-panel>
+      <ng-template ngbPanelTitle>
+        <div class="d-flex justify-content-between">
+            <div>{{ 'voucher.coupon' | cxTranslate }}<i class="icon-caret-down"></i></div>
+        </div>
+    </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="form-group">
+          <form (ngSubmit)="applyVoucher()" [formGroup]="couponForm">
+            <div class="cx-cart-coupon-container">
+              <input type="text" class="form-control input-coupon-code" formControlName="couponCode"
+                placeholder="{{ 'voucher.placeholder' | cxTranslate }}" />
+              <button class="btn btn-block btn-action apply-coupon-button" type="submit"
+                [disabled]="cartIsLoading$ | async" [class.disabled]="cartIsLoading$ | async">
+                {{ 'voucher.apply' | cxTranslate }}
+              </button>
+              <cx-form-errors
+              [control]="couponForm.get('couponCode')"
+            ></cx-form-errors>
+            </div>
+          </form>
+        </div>
+        <app-custom-applied-coupon
+      [vouchers]="cart.appliedVouchers"
+      [cartIsLoading]="cartIsLoading$ | async"
+      [isReadOnly]="false"
+    >
+    </app-custom-applied-coupon>
+
+        <ng-container *ngIf="applicableCoupons && applicableCoupons.length > 0">
+          <div class="cx-available-coupon">
+            <div class="title cx-cart-coupon-title">
+              {{ 'voucher.availableCoupons' | cxTranslate }}
+            </div>
+            <div class="message">
+              {{ 'voucher.availableCouponsLabel' | cxTranslate }}
+            </div>
+            <div class="scroll">
+              <div class="coupons card" *ngFor="let coupon of applicableCoupons">
+                <button class="coupon-id link" [disabled]="cartIsLoading$ | async"
+                  [class.disabled]="cartIsLoading$ | async">
+                  {{ coupon.couponId }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</ng-container>

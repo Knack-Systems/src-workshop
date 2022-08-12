@@ -1,0 +1,57 @@
+<ng-container *ngIf="cart$ | async as cart">
+    <div class="cx-cart-quick-order-form-title">
+      {{ 'quickOrderCartForm.title' | cxTranslate }}
+    </div>
+    <div class="form-group">
+      <form (ngSubmit)="applyQuickOrder()" [formGroup]="quickOrderForm">
+        <div class="cx-cart-quick-order-form-container">
+          <span class="cx-cart-quick-order-form-productID">
+            <label class="cx-cart-quick-order-form-label">
+              {{ 'quickOrderCartForm.productCodeLabel' | cxTranslate }}
+            </label>
+            <input
+              aria-required="true"
+              class="form-control input-product-code"
+              formControlName="productCode"
+              placeholder="{{
+                'quickOrderCartForm.productCodePlaceholder' | cxTranslate
+              }}"
+              type="number"
+              onKeyPress="if(this.value.length==7) return false;"
+            />
+          </span>
+  
+          <span class="cx-cart-quick-order-form-qty">
+            <label class="cx-cart-quick-order-form-label">
+              {{ 'quickOrderCartForm.quantityLabel' | cxTranslate }}
+            </label>
+            <input
+              aria-required="true"
+              class="form-control input-quantity"
+              formControlName="quantity"
+              placeholder="Enter Quantity"
+              type="number"
+            />
+          </span>
+          <button
+            [disabled]="!quickOrderForm.valid"
+            [class.disabled]="cartIsLoading$ | async"
+            class="btn btn-primary btn-block"
+            type="submit"
+          >
+            {{ 'quickOrderCartForm.addToCart' | cxTranslate }}
+          </button>
+          <cx-form-errors
+            aria-live="assertive"
+            aria-atomic="true"
+            [control]="quickOrderForm.get('productCode')"
+          ></cx-form-errors>
+          <cx-form-errors
+            aria-live="assertive"
+            aria-atomic="true"
+            [control]="quickOrderForm.get('quantity')"
+          ></cx-form-errors>
+        </div>
+      </form></div
+  ></ng-container>
+  
