@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CmsConfig, ConfigModule, provideDefaultConfig, TranslatePipe, UrlModule } from '@spartacus/core';
+import { CmsConfig, ConfigModule, provideConfig, provideDefaultConfig, TranslatePipe, UrlModule } from '@spartacus/core';
 import { CustomCartTotalsComponent } from './custom-cart-totals/custom-cart-totals.component';
 import { CustomOrderSummaryComponent } from '../custom-order-summary/custom-order-summary.component';
 import { CarouselModule, FormErrorsModule, IconModule, MediaModule, ProductReferencesComponent, ProgressButtonModule } from '@spartacus/storefront';
@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { CustomCarasoulComponent } from '../custom-carasoul/custom-carasoul.component';
 import { CustomMediaComponent } from '../custom-media/custom-media.component';
 import { CustomCarasoulChildComponent } from '../custom-carasoul-child/custom-carasoul-child.component';
+import { CustomProdReferComponent } from '../custom-prod-refer/custom-prod-refer.component';
+
 
 @NgModule({
   declarations: [
@@ -16,14 +18,15 @@ import { CustomCarasoulChildComponent } from '../custom-carasoul-child/custom-ca
     CustomOrderSummaryComponent,
     CustomCarasoulComponent,
     CustomMediaComponent,
-    CustomCarasoulChildComponent
+    CustomCarasoulChildComponent,
+    CustomProdReferComponent
   ],
   imports: [
     CommonModule,
     ProgressButtonModule,
     MediaModule,
     IconModule,
-    CarouselModule, CarouselModule, MediaModule, RouterModule, UrlModule,
+    CarouselModule, MediaModule, RouterModule, UrlModule,
     ConfigModule.withConfig({
       cmsComponents: {
         CartTotalsComponent: {
@@ -35,16 +38,21 @@ import { CustomCarasoulChildComponent } from '../custom-carasoul-child/custom-ca
         CartApplyCouponComponent: {
           component: CustomApplyCouponComponent
         },
-       // CartQuickOrderFormComponent: {
-      //    component: CustomCartQuickComponent
-      //  },
-        ImportExportOrderEntriesComponent: {
-          component:CustomCarasoulComponent
-        }
+      ImportExportOrderEntriesComponent: {
+         component:CustomProdReferComponent
+       },
 
       }
     } as CmsConfig)
   ],
-  
+ /*providers: [
+  provideConfig(<CmsConfig>{
+      cmsComponents: {
+        AddToSavedCartsComponent: {
+          component: CustomProdReferComponent
+        },
+      },
+    }),
+  ],*/
 })
 export class CustomCartModule { }
