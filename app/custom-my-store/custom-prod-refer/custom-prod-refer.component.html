@@ -1,29 +1,32 @@
 <div class="row">
   <div class="col">
   <h4 class="text-center"><b class="">You may also like this..</b></h4></div>
-  <div class="row pt-3">
+  <div class="row py-3 text-center select_anotherModel">
     <div class="col-4">
   <ng-container *ngIf="myCurrentProduct1$ | async as product">
+    <a tabindex="0" [routerLink]="{ cxRoute: 'product', params: product } | cxUrl">
+    <img [src]="product.images?.PRIMARY?.product?.url" alt="" />
       <h4> {{product?.name}}</h4>
-      <img [src]="product.images?.PRIMARY?.thumbnail?.url" alt="" />
      <h4>{{product?.price?.formattedValue}}</h4>
-     <p>{{product?.summary}}</p>
+   </a>
   </ng-container>
 </div>
 <div class="col-4">
   <ng-container *ngIf="myCurrentProduct2$ | async as product">
+    <a tabindex="0" [routerLink]="{ cxRoute: 'product', params: product } | cxUrl">
+    <img [src]="product.images?.PRIMARY?.product?.url" alt="" />
       <h4> {{product?.name}}</h4>
-      <img [src]="product.images?.PRIMARY?.thumbnail?.url" alt="" />
      <h4>{{product?.price?.formattedValue}}</h4>
-     <p>{{product?.summary}}</p>
+     </a>
   </ng-container>
 </div>
 <div class="col-4">
   <ng-container *ngIf="myCurrentProduct3$ | async as product">
+    <a tabindex="0" [routerLink]="{ cxRoute: 'product', params: product } | cxUrl">
+    <img [src]="product.images?.PRIMARY?.product?.url" alt="" />
       <h4> {{product?.name}}</h4>
-      <img [src]="product.images?.PRIMARY?.thumbnail?.url" alt="" />
      <h4>{{product?.price?.formattedValue}}</h4>
-     <p>{{product?.summary}}</p>
+     </a>
   </ng-container>
 </div>
 

@@ -19,7 +19,7 @@ export class CustomProdReferComponent implements OnInit  {
   myCurrentProduct2$: Observable<Product|any> = this.productService.get(this.productId2);
   myCurrentProduct3$: Observable<Product|any> = this.productService.get(this.productId3);
 
-myCurrentProduct:any;
+
   constructor(protected productService: ProductService) { }
   
   ngOnInit(): void {
