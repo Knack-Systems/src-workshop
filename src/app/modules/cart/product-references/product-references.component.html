@@ -7,42 +7,42 @@
 
     <ng-container>
       <div class="col-4 productDesc">
+        <div class="productSummary">
+          <img [src]="prodFirst.images.PRIMARY.thumbnail.url" alt="PL60 Black">
+        </div>
         <div class="productName">
-          <p>{{ prodFirst.name }}</p>
+          <span>{{ prodFirst?.name }}</span>
         </div>
         <div class="productPrice">
-          <p>{{ prodFirst.price.formattedValue }}</p>
-        </div>
-        <div class="productSummary">
-          <p>{{ prodFirst.summary }}</p>
+          <span>{{ prodFirst?.price?.formattedValue }}</span>
         </div>
       </div>
     </ng-container>
 
     <ng-container>
       <div class="col-4 productDesc">
+        <div class="productSummary">
+          <img src="{{ prodSecond.images.PRIMARY.thumbnail.url }}" alt="PL60 Grey">
+        </div>
         <div class="productName">
-          <p>{{ prodSecond.name }}</p>
+          <span>{{ prodSecond.name }}</span>
         </div>
         <div class="productPrice">
-          <p>{{ prodSecond.price.formattedValue }}</p>
-        </div>
-        <div class="productSummary">
-          <p>{{ prodSecond.summary }}</p>
+          <span>{{ prodSecond.price.formattedValue }}</span>
         </div>
       </div>
     </ng-container>
 
     <ng-container>
       <div class="col-4 productDesc">
+        <div class="productSummary">
+          <img src="{{ prodThird.images.PRIMARY.thumbnail.url }}" alt="PL60 Silver">
+        </div>
         <div class="productName">
-          <p>{{ prodThird.name }}</p>
+          <span>{{ prodThird.name }}</span>
         </div>
         <div class="productPrice">
-          <p>{{ prodThird.price.formattedValue }}</p>
-        </div>
-        <div class="productSummary">
-          <p>{{ prodThird.summary }}</p>
+          <span>{{ prodThird.price.formattedValue }}</span>
         </div>
       </div>
     </ng-container>

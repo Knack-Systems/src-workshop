@@ -18,7 +18,6 @@ export class CustomCartTotalsComponent implements OnInit {
 
   ngOnInit() {
     this.cart$ = this.activeCartService.getActive();
-    console.log(this.cart$);
     
     this.entries$ = this.activeCartService
       .getEntries()

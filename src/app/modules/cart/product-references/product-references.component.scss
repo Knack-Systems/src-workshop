@@ -7,20 +7,20 @@
 
     .row {
         .productDesc {
-            border: 1px solid #e6d9d9;
             padding: 5px;
             margin-bottom: 10rem;
-            border-radius: 2%;
             text-align: center;
 
             .productName {
                 font-weight: bold;
+                margin-bottom: 5px;
             }
             .productPrice {
                 font-weight: 600;
             }
             .productSummary {
                 font-weight: 600;
+                margin-bottom: 15px;
             }
         }
     }

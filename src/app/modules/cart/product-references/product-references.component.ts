@@ -20,13 +20,19 @@ export class CustomProductReferencesComponent implements OnInit {
 
   getProductByID() {
     this.ProductService.get('1981412').subscribe((res: any) => {
-      this.prodFirst = res;
+      if (res?.code === '1981412') {
+        this.prodFirst = res;
+      }
     })
     this.ProductService.get('1981413').subscribe((res: any) => {
-      this.prodSecond = res;
+      if (res?.code === '1981413') {
+        this.prodSecond = res;
+      }
     })
     this.ProductService.get('1981415').subscribe((res: any) => {
-      this.prodThird = res;
+      if (res?.code === '1981415') {
+        this.prodThird = res;
+      }
     })
   }
 }
