@@ -8,24 +8,10 @@ import { UserProfileRootModule, USER_PROFILE_FEATURE } from "@spartacus/user/pro
 @NgModule({
   declarations: [],
   imports: [
-    UserAccountRootModule,
-    UserProfileRootModule
+    UserProfileRootModule,
+    UserAccountRootModule
   ],
   providers: [provideConfig(<CmsConfig>{
-    featureModules: {
-      [USER_ACCOUNT_FEATURE]: {
-        module: () =>
-          import('@spartacus/user/account').then((m) => m.UserAccountModule),
-      },
-    }
-  }),
-  provideConfig(<I18nConfig>{
-    i18n: {
-      resources: userAccountTranslations,
-      chunks: userAccountTranslationChunksConfig,
-    },
-  }),
-  provideConfig(<CmsConfig>{
     featureModules: {
       [USER_PROFILE_FEATURE]: {
         module: () =>
@@ -37,6 +23,20 @@ import { UserProfileRootModule, USER_PROFILE_FEATURE } from "@spartacus/user/pro
     i18n: {
       resources: userProfileTranslations,
       chunks: userProfileTranslationChunksConfig,
+    },
+  }),
+  provideConfig(<CmsConfig>{
+    featureModules: {
+      [USER_ACCOUNT_FEATURE]: {
+        module: () =>
+          import('@spartacus/user/account').then((m) => m.UserAccountModule),
+      },
+    }
+  }),
+  provideConfig(<I18nConfig>{
+    i18n: {
+      resources: userAccountTranslations,
+      chunks: userAccountTranslationChunksConfig,
     },
   })
   ]

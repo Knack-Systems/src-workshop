@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
-import { AppRoutingModule } from "@spartacus/storefront";
+import { StarRatingModule } from "@spartacus/storefront";
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomMyStoreModule } from "./custom-my-store/custom-my-store.module";
 import { SpartacusModule } from './spartacus/spartacus.module';
+import { STCartCouponModule } from "./cart-coupon";
+import { CartSummaryModule } from "./cart-summary/cart-summary.module";
+import { STSubtotalComponentModule } from "./subtotal-component/subtotal-component.module";
+import { STImportExportModule } from './import-export/import-export.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { SpartacusModule } from './spartacus/spartacus.module';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     SpartacusModule,
-    CustomMyStoreModule
+    StarRatingModule,
+    STCartCouponModule,
+    CartSummaryModule,
+    STSubtotalComponentModule,
+    STImportExportModule
   ],
   providers: [],
   bootstrap: [AppComponent]
