@@ -1,0 +1,37 @@
+<div class="row summary-border">
+  <div class="col-md-12"><b class="underlined">Quick Order</b></div>
+  <div class="row col-md-12 cx-cart-quick-order-form-container">
+    <div class="col-md-8">
+      <span>
+        <label class="">Product ID</label>
+        <input
+          aria-required="true"
+          class="form-control input-product-code"
+          placeholder="Enter ID"
+          type="text"
+          [(ngModel)]="productId"
+          (ngModelChange)="productIdChange()"
+        />
+      </span>
+    </div>
+    <div class="col-md-4">
+      <span>
+        <label>Quantity</label>
+        <input
+          aria-required="true"
+          class="form-control input-product-code"
+          type="number"
+          [(ngModel)]="quantity"
+        />
+      </span>
+    </div>
+  </div>
+  <div class="col-md-12 button">
+    <button
+      class="btn btn-block btn-action apply-coupon-button"
+      [disabled]="disableButton"
+    >
+      Add
+    </button>
+  </div>
+</div>

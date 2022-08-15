@@ -1,0 +1,39 @@
+<div class="row summary-border" *ngIf="cart$ | async as cart">
+  <div class="col-md-12">
+    <h4><b>ORDER SUMMARY</b></h4>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-8 underlined">Subtotal:</div>
+    <div class="col-md-4 underlined">
+      {{ cart.subTotal?.formattedValue }}
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-8 underlined">Product discounts:</div>
+    <div class="col-md-4 underlined">
+      {{ cart.productDiscounts?.formattedValue }}
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-12 underlined">
+      The order total includes tax of {{ cart.totalTax?.formattedValue }}
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-8 underlined"><b>Total:</b></div>
+    <div class="col-md-4 underlined">
+      <b>
+        {{ cart.totalPrice?.formattedValue }}
+      </b>
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-12 underlined">
+      You saved: {{ cart.totalDiscounts?.formattedValue }}
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 35px; margin-left: 48px">
+  <cx-progress-button>Proceed To Checkout</cx-progress-button>
+</div>

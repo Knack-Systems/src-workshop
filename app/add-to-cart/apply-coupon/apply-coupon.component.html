@@ -1,0 +1,23 @@
+<div class="row summary-border">
+  <div class="col-md-12"><b class="underlined">Have a coupon?</b></div>
+  <div class="row col-md-12" *ngIf="activeCoupons.length > 0">
+    <div *ngFor="let coupon of activeCoupons">{{ coupon }}</div>
+  </div>
+  <div class="col-md-8 cx-cart-coupon-container">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Promo code"
+      [(ngModel)]="couponCode"
+    />
+  </div>
+  <div class="col-md-4">
+    <button
+      type="submit"
+      class="btn btn-block btn-action apply-coupon-button"
+      (click)="apply()"
+    >
+      Apply
+    </button>
+  </div>
+</div>

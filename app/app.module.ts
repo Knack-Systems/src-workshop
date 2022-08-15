@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CustomContactModule } from './custom-contact/custom-contact.module';
 import { CustomProductModule } from './custom-product/custom-product.module';
 import { SpartacusModule } from './spartacus/spartacus.module';
+import { AddToCartModule } from './add-to-cart/add-to-cart.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { SpartacusModule } from './spartacus/spartacus.module';
     SpartacusModule,
     CustomContactModule,
     CustomProductModule,
+    AddToCartModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
