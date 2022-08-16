@@ -10,9 +10,9 @@ import { ICON_TYPE } from '@spartacus/storefront';
 })
 export class AppliedCouponsComponent {
   @Input()
-  vouchers: Voucher[];
+  vouchers!: Voucher[];
   @Input()
-  cartIsLoading = false;
+  cartIsLoading?:boolean = false;
   @Input()
   isReadOnly = false;
 
@@ -27,7 +27,7 @@ export class AppliedCouponsComponent {
     });
   }
 
-  removeVoucher(voucherId: string) {
+  removeVoucher(voucherId: any) {
     this.cartVoucherService.removeVoucher(voucherId);
   }
 }

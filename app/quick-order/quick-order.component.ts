@@ -23,7 +23,7 @@ import { first, map } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class STQuickOrderComponent implements OnInit, OnDestroy {
-  quickOrderForm: FormGroup;
+  quickOrderForm!: FormGroup;
   cartIsLoading$: Observable<boolean> = this.activeCartService
     .isStable()
     .pipe(map((loaded) => !loaded));

@@ -1,6 +1,7 @@
 <ng-container *ngIf="cart$ | async as cart">
-  <div class="cx-cart-quick-order-form-title">
-    {{ 'quickOrderCartForm.title' | cxTranslate }}
+  <div class="cx-cart-quick-order-form">
+  <div class="cx-cart-quick-order-form-title"><u>
+    {{ 'quickOrderCartForm.title' | cxTranslate }}</u>
   </div>
   <div class="form-group">
     <form (ngSubmit)="applyQuickOrder()" [formGroup]="quickOrderForm">
@@ -39,7 +40,7 @@
         >
           {{ 'quickOrderCartForm.addToCart' | cxTranslate }}
         </button>
-        <cx-form-errors
+        <!-- <cx-form-errors
           aria-live="assertive"
           aria-atomic="true"
           [control]="quickOrderForm.get('productCode')"
@@ -48,7 +49,8 @@
           aria-live="assertive"
           aria-atomic="true"
           [control]="quickOrderForm.get('quantity')"
-        ></cx-form-errors>
+        ></cx-form-errors> -->
       </div>
     </form></div
-></ng-container>
+>
+  </div></ng-container>

@@ -1,4 +1,5 @@
-<h3>{{ 'orderCost.orderSummary' | cxTranslate }}</h3>
+<div style="padding-left: 20px;">
+<h3 style="padding-left: 13px;"><u><strong>{{ 'orderCost.orderSummary' | cxTranslate }}</strong> </u></h3>
 
 <div class="cx-summary-partials" *ngIf="cart">
   <div class="cx-summary-row">
@@ -16,7 +17,7 @@
     <div class="col-6 cx-summary-amount">
       {{ cart.productDiscounts?.formattedValue }}
     </div>
-    
+
     <!-- <div class="col-6 cx-summary-label">
       {{
         (cart.deliveryCost?.formattedValue
@@ -50,12 +51,12 @@
       {{ cart.totalPriceWithTax?.formattedValue }}
     </div>
   </div>
-  <div class="cx-summary-row" >
+  <div class="cx-summary-row"  style="padding-left:15px;">
     {{ 'orderCost.discount' | cxTranslate }}
     {{ cart.totalDiscounts?.formattedValue }}
   </div>
   <ng-template #cartWithoutNet>
-    <div class="cx-summary-row">
+    <div class="cx-summary-row" style="padding-left: 15px;">
       {{
         cart.totalPriceWithTax?.value !== cart.totalPrice?.value
           ? ('orderCost.grossTax' | cxTranslate)
@@ -73,4 +74,4 @@
 ></cx-promotions>
 -->
 
-
+</div>

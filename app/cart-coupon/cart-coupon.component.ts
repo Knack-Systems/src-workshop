@@ -12,11 +12,11 @@ import { map, tap } from 'rxjs/operators';
 })
 export class STCartCouponComponent implements OnInit, OnDestroy {
   MAX_CUSTOMER_COUPON_PAGE = 100;
-  couponForm: FormGroup;
-  cartIsLoading$: Observable<boolean>;
-  cart$: Observable<Cart>;
-  cartId: any;
-  applicableCoupons: CustomerCoupon[] ;
+  couponForm!: FormGroup;
+  cartIsLoading$!: Observable<boolean>;
+  cart$!: Observable<Cart>;
+  cartId!: any;
+  applicableCoupons!: CustomerCoupon[] ;
 
   protected ignoreCloseEvent = false;
 
@@ -68,7 +68,6 @@ export class STCartCouponComponent implements OnInit, OnDestroy {
       couponCode: ['', [Validators.required]],
     });
 
-    // TODO(#7241): Replace process subscriptions with event listeners and drop process for ADD_VOUCHER
     this.subscription.add(
       this.cartVoucherService
         .getAddVoucherResultSuccess()
@@ -77,7 +76,6 @@ export class STCartCouponComponent implements OnInit, OnDestroy {
         })
     );
 
-    // TODO(#7241): Replace process subscriptions with event listeners and drop process for ADD_VOUCHER
     this.subscription.add(
       this.cartVoucherService.getAddVoucherResultError().subscribe((error) => {
         this.onError(error);
@@ -127,9 +125,9 @@ export class STCartCouponComponent implements OnInit, OnDestroy {
   }
   status: boolean = false;
 clickEvent(){
-    this.status = !this.status;       
+    this.status = !this.status;
 }
-  applyCustomerCoupon(couponId: string): void {
+  applyCustomerCoupon(couponId: any): void {
     this.cartVoucherService.addVoucher(couponId, this.cartId);
     this.couponBoxIsActive = false;
   }
