@@ -6,12 +6,14 @@ import { ProgressButtonModule } from '@spartacus/storefront';
 import { ApplyCouponComponent } from './apply-coupon/apply-coupon.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuickOrderComponent } from './quick-order/quick-order.component';
+import { SimilarProductsComponent } from './similar-products/similar-products.component';
 
 @NgModule({
   declarations: [
     OrderSummaryComponent,
     ApplyCouponComponent,
     QuickOrderComponent,
+    SimilarProductsComponent,
   ],
   imports: [
     ProgressButtonModule,
@@ -36,6 +38,13 @@ import { QuickOrderComponent } from './quick-order/quick-order.component';
       cmsComponents: {
         CartQuickOrderFormComponent: {
           component: QuickOrderComponent,
+        },
+      },
+    } as CmsConfig),
+    ConfigModule.withConfig({
+      cmsComponents: {
+        ImportExportOrderEntriesComponent: {
+          component: SimilarProductsComponent,
         },
       },
     } as CmsConfig),

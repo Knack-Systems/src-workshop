@@ -1,0 +1,10 @@
+<div class="header"><b>You may also like</b></div>
+<ng-container *ngIf="referenceProducts$ | async as reference">
+  <div class="row">
+    <div *ngFor="let ref of reference" class="col-md-4 border">
+      <p>{{ ref.target?.name }}</p>
+      <p>{{ ref.target?.price?.formattedValue }}</p>
+      <p>{{ ref.target?.summary }}</p>
+    </div>
+  </div>
+</ng-container>
