@@ -39,7 +39,7 @@ import { CustomProdReferComponent } from '../custom-prod-refer/custom-prod-refer
           component: CustomApplyCouponComponent
         },
       ImportExportOrderEntriesComponent: {
-         component:CustomProdReferComponent
+         component:CustomCarasoulComponent
        },
 
       }
