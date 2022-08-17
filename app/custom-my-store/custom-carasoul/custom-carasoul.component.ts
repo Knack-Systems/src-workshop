@@ -25,7 +25,8 @@ import { ProductListService } from 'src/app/services/product-list.service';
 export class CustomCarasoulComponent implements OnInit {
 myProds:any;
 productCode:any;
-baseURL:any = 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/'
+baseURL:string | undefined;
+//baseURL:any = 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/'
 
 
 
@@ -36,18 +37,19 @@ baseURL:any = 'https://spartacus-demo.eastus.cloudapp.azure.com:8443/'
     protected productList: ProductListService,
     protected activecart:ActiveCartService,
     protected changeDetect: ChangeDetectorRef,
-    protected occEndpointService: OccEndpointsService,
-  ) {}
-
-  
+    protected occEndpointService: OccEndpointsService
+  ) {
+   
+    }
 
   ngOnInit() {
-
+    this.baseURL = this.occEndpointService.getBaseUrl();
+   this.baseURL  = this.baseURL.substring(0, this.baseURL.indexOf('/occ'));
+//console.log(this.baseURL)
     this.activecart.getActive()
     .subscribe((res:any)=> {
       this.productCode = res.entries[0].product.code;
       console.log(this.productCode)
-    
     })
     
   this.productList.getProductDetails(this.productCode).subscribe
