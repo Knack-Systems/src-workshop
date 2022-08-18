@@ -5,47 +5,34 @@
 
   <div class="row">
 
-    <ng-container>
-      <div class="col-4 productDesc">
-        <div class="productSummary">
-          <img [src]="prodFirst.images.PRIMARY.thumbnail.url" alt="PL60 Black">
+     <div *ngFor="let item of productData">
+      <div class="col-12 productDesc">
+        <div class="productImg">
+            <img [src]="baseURl+item.target?.images[2].url" alt="PL60 Camera">
         </div>
         <div class="productName">
-          <span>{{ prodFirst?.name }}</span>
+          <span>{{ item.target.name }}</span>
         </div>
         <div class="productPrice">
-          <span>{{ prodFirst?.price?.formattedValue }}</span>
+          <span>{{ item.target.price.formattedValue }}</span>
         </div>
       </div>
-    </ng-container>
+     </div> 
 
-    <ng-container>
-      <div class="col-4 productDesc">
-        <div class="productSummary">
-          <img src="{{ prodSecond.images.PRIMARY.thumbnail.url }}" alt="PL60 Grey">
+     <!-- <div *ngIf="items$ async as item">
+      <div class="col-12 productDesc">
+        <div class="productImg">
+            <img [src]="baseURl+item.target?.images[2].url" alt="PL60 Camera">
         </div>
         <div class="productName">
-          <span>{{ prodSecond.name }}</span>
+          <span>{{ item.target.name }}</span>
         </div>
         <div class="productPrice">
-          <span>{{ prodSecond.price.formattedValue }}</span>
+          <span>{{ item.target.price.formattedValue }}</span>
         </div>
       </div>
-    </ng-container>
-
-    <ng-container>
-      <div class="col-4 productDesc">
-        <div class="productSummary">
-          <img src="{{ prodThird.images.PRIMARY.thumbnail.url }}" alt="PL60 Silver">
-        </div>
-        <div class="productName">
-          <span>{{ prodThird.name }}</span>
-        </div>
-        <div class="productPrice">
-          <span>{{ prodThird.price.formattedValue }}</span>
-        </div>
-      </div>
-    </ng-container>
+     </div>  -->
 
   </div>
-</div>
+</div> 
+

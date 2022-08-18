@@ -2,10 +2,11 @@
     h3 {
         text-align: center;
         margin-bottom: 25px;
-        font-weight: 600;
+        font-weight: bold;
     }
 
     .row {
+        justify-content: space-evenly;
         .productDesc {
             padding: 5px;
             margin-bottom: 10rem;
@@ -18,7 +19,7 @@
             .productPrice {
                 font-weight: 600;
             }
-            .productSummary {
+            .productImg {
                 font-weight: 600;
                 margin-bottom: 15px;
             }
