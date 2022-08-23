@@ -1,0 +1,10 @@
+<div class="header"><b>You may also like</b></div>
+<div *ngIf="products$ | async as products">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-4 border">
+      <p class="header">{{ product.target?.name }}</p>
+      <p class="header">{{ product.target?.price?.formattedValue }}</p>
+      <p>{{ product.target?.summary }}</p>
+    </div>
+  </div>
+</div>

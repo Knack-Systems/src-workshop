@@ -1,0 +1,27 @@
+<div class="quick-order-container">
+    <h3 class="quick-order-title">
+        Quick Order
+    </h3>
+    <form  [formGroup]="quickOrderForm" (ngSubmit)="onSubmit()">
+        <div class="flex-container">
+            <div class="mr-3 item">
+                <label>
+                    {{ 'quickOrderCartForm.productCodeLabel' | cxTranslate }}
+                </label>
+                <input aria-required="true" class="form-control input-product-code" formControlName="productCode" type="text"
+                    placeholder="{{'quickOrderCartForm.productCodePlaceholder'  | cxTranslate}}"/>
+            </div> 
+    
+            <div class="mr-3">
+                <label class="cx-cart-quick-order-form-label">
+                    {{ 'quickOrderCartForm.quantityLabel' | cxTranslate }}
+                </label>
+                <input aria-required="true" class="form-control input-quantity" formControlName="quantity" type="number"/>
+            </div>
+        </div>
+        <div class="mt-3">
+            <button [disabled]="quickOrderForm.invalid" class="btn btn-block btn-action" type="submit"> add </button>
+        </div>
+    </form>
+</div>
+

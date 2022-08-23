@@ -1,0 +1,43 @@
+.quick-order-container{
+    border: 1rem;
+    padding-inline-end: 0;
+    padding-inline-start: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.quick-order-title{
+    font-size:1rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+.btn-style {
+    font-size: 1.125rem;
+    color: #212738;
+    text-transform: var(--cx-text-transform);
+    line-height: 1.34;
+    padding: 11px 12px;
+    height: 48px;
+    max-height: 48px;
+    min-width: 48px;
+    border-radius: var(--cx-buttons-border-radius);
+}
+
+@media (max-width: 450px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .quick-order-container{
+        border: 1rem;
+        padding-inline-end: 0;
+        padding-inline-start: 0rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}

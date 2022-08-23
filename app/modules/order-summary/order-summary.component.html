@@ -1,0 +1,27 @@
+<div class="Order-Summary-Container">
+    <h3 class="Order-Summary-Title pt-3">Order Summary</h3>
+    <div class="Order-Summary-Items">
+        <div>Subtotal:</div>
+        <div>{{ cart.subTotal?.formattedValue }}</div>
+    </div>
+    <div class="Order-Summary-Items">
+        <div>Product discounts:</div>
+        <div>{{ cart.productDiscounts?.formattedValue }}</div>
+    </div>
+    <div class="Order-Summary-Items">
+        <div>The order total includes tax of {{ cart.totalTax?.formattedValue}}</div>
+    </div>
+    <div class="Order-Summary-Items">
+        <div><b>TOTAL:</b></div>
+        <div><b>{{ cart.subTotal?.formattedValue }}</b></div>
+    </div> 
+    <div class="Order-Summary-Items">
+        <div>You saved: {{ cart.totalDiscounts?.formattedValue}}</div>
+    </div>
+
+    <div>
+        <a class="btn Btn-Style" [routerLink]="{ cxRoute: 'checkout' } | cxUrl">Proceed To Checkout</a>
+    </div>
+</div>
+
+
