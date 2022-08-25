@@ -1,0 +1,36 @@
+.quick-order-container {
+    display: block;
+    padding-top: 16px;
+    padding-inline-end: 15px;
+    padding-bottom: 0;
+    padding-inline-start: 15px;
+    margin: 0;
+    .border-container {
+        border: 1px solid #CCCCCC;
+        display: block;
+        padding-top: 16px;
+        padding-inline-end: 15px;
+        padding-bottom: 0;
+        padding-inline-start: 15px;
+        margin: 0;
+        h3 {
+            width: 100%;
+            font-weight: bold;
+            margin-left: 0;
+        }
+        .quick-order-form-container {
+            display: flex;
+            .product-id {
+                width: 100%;
+                
+            }
+            .product-qty {
+                margin-left: 20px;
+            }
+        }
+        .error {
+            color: #e31111;
+        } 
+    }
+
+}

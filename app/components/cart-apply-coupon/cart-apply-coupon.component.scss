@@ -1,0 +1,37 @@
+.add-promo-text { 
+    h3 {
+        width: 60%;
+        float: left;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+    .fa {
+        font-weight: bold;
+        font-size: 27px;
+    }
+
+}
+.coupon-code-container {
+    display: block;
+    padding-top: 16px;
+    padding-inline-end: 15px;
+    padding-bottom: 0;
+    padding-inline-start: 15px;
+    margin: 0;
+    .code-container-box {
+        border: 1px solid #CCCCCC;
+        .cx-cart-coupon-container {
+            height: 70px;
+            padding-left: 18px;
+            padding-right: 18px;
+            input {
+                width: 65%;
+                float: left;
+                height: 42px;
+                border-radius: 0;
+                border-color: #e11212;
+                color: #000000;
+            }
+        }
+    }  
+}

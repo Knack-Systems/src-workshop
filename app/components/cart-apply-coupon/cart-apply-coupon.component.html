@@ -1,0 +1,21 @@
+<div class="coupon-code-container">
+    <div class="code-container-box">
+    <div class="add-promo-text">
+      <h3>Add Promo Code</h3>
+      <i (click)="toggleDisplay()" class="fa fa-angle-down"></i>
+    </div>
+  <div *ngIf = "!isShow" class="form-group">
+    <form (ngSubmit)="onSubmit()" [formGroup]="couponForm">
+      <div class="cx-cart-coupon-container">
+        <input type="text" class="form-control input-coupon-code" formControlName="couponCode" placeholder="code"/>
+        <button class="btn btn-secondary" type="submit">
+          Add
+        </button>
+        <div class="text-danger float-left" *ngIf="error" role="alert">
+          {{error}}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>

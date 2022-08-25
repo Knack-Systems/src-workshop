@@ -1,0 +1,45 @@
+<div class="quick-order-container">
+<div class="border-container">
+<h3> Quick Order </h3>
+<div class="form-group">
+    <form (ngSubmit)="onSubmitQuickOrder()" [formGroup]="quickOrderForm">
+    <div class="quick-order-form-container">
+        <span class="product-id">
+            <label> Product ID </label>
+            <input formControlName="productCode" id="productCode" name="productCode" type="text" 
+            class="form-control input-product-code" placeholder="Enter ID" minlength="7" maxlength="7">
+            <div *ngIf="!quickOrderForm.get('productCode')?.valid && quickOrderForm.get('productCode')?.touched" class="error">
+                <div *ngIf="quickOrderForm.get('productCode')?.errors?.required">
+                  Product Code is required.
+                </div>
+                <div *ngIf="quickOrderForm.get('productCode')?.errors?.minlength">
+                    This field must have at least 7 character.
+                  </div>
+                  <div *ngIf="quickOrderForm.get('productCode')?.errors?.maxlength">
+                    This field must have at most 7 characters.
+                  </div>
+                  <div *ngIf="quickOrderForm.get('productCode')?.errors?.number">
+                    This field must be only number.
+                  </div>
+            </div>
+        </span>
+        <span class="product-qty">
+            <label> Qty </label>
+            <input formControlName="quantity" id="quantity" name="quantity" type="number" 
+            class="form-control input-quantity" 
+            [class.is-invalid]="quickOrderForm.get('quantity')?.invalid && 
+            (quickOrderForm.get('quantity')?.dirty || quickOrderForm.get('quantity')?.touched)" >
+            <div *ngIf="!quickOrderForm.get('quantity')?.valid && quickOrderForm.get('quantity')?.touched" class="error">
+                <div *ngIf="quickOrderForm.get('quantity')?.errors?.required">
+                  Quantity is required.
+                </div>
+                
+            </div>
+        </span>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" 
+    [ngClass]="{'disabled': quickOrderForm.get('productCode')?.invalid || quickOrderForm.get('quantity')?.invalid || quickOrderForm.get('productCode')?.errors?.minlength }"> Add To Cart</button>
+    </form>
+</div>
+</div>
+</div>
